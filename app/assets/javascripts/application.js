@@ -23,16 +23,21 @@
 // Bean Counter code
 var beans = 0;
 var monkeys = 0;
-localStorage.setItem(﻿'monkeys', 'monkeys');
-localStorage.setItem(﻿'beans', 'beans');
+
+// localStorage.setItem(﻿'monkeys', 'monkeys');
+// localStorage.setItem(﻿'beans', 'beans');
+
+
 
 function beanClick(number) {
   beans = beans + number;
   document.getElementById("beans").innerHTML = beans;
-  save();
+  // save();
 };
 
-function buyMonkey() { 
+function buyMonkey() {
+  monkeyCount = document.querySelector('.monkey-count').dataset.monkey
+  var monkeys = monkeyCount; 
   var monkeyCost = Math.floor(10 * Math.pow(1.1,monkeys));
   if(beans >= monkeyCost) {
       monkeys = monkeys + 1;
@@ -45,21 +50,23 @@ function buyMonkey() {
     };
 
     window.setInterval(function(){ beanClick(monkeys); }, 1000);
-    save();
+    // save();
 };
 
-function save() {
-	var save = {
-    monkeys: monkeys,
-    beans: beans,
-}
-	localStorage.setItem("save",JSON.stringify(save));
-}
+// function save() {
+// 	var save = {
+//     monkeys: monkeys,
+//     beans: beans,
+// }
+// 	localStorage.setItem("save",JSON.stringify(save));
+// }
 
 
-function load() {
-var savegame = JSON.parse(localStorage.getItem("save"));
-}
+// function load() {
+// var savegame = JSON.parse(localStorage.getItem("save"));
+// }
+
+
 
 // TODO
 // Add user registration

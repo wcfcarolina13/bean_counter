@@ -14,6 +14,9 @@
 			<button class="upgrade-btn" onClick="buyMonkey()">Buy 1 Monkey</button>
 	    	<p>Monkeys: <span id="monkeys">0</span><br /></p>
 	    	<p>Cost: <span id="monkeyCost">10</span></p>
+
+	    	<%= content_tag :div, class: 'monkey-count', data: {monkey: @monkeys} do %>
+			<% end %>
 	    </div>
 	</div>
 
