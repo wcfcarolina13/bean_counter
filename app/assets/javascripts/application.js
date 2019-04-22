@@ -21,44 +21,14 @@
 //= require_tree .
 
 // Bean Counter code
-var beans = 0;
-var monkeys = 0;
 
-// localStorage.setItem(﻿'monkeys', 'monkeys');
-// localStorage.setItem(﻿'beans', 'beans');
-
-
-
-function beanClick(number) {
-  beans = beans + number;
-  document.getElementById("beans").innerHTML = beans;
-  // save();
-};
-
-function buyMonkey() {
-  monkeyCount = document.querySelector('.monkey-count').dataset.monkey
-  var monkeys = monkeyCount; 
-  var monkeyCost = Math.floor(10 * Math.pow(1.1,monkeys));
-  if(beans >= monkeyCost) {
-      monkeys = monkeys + 1;
-      beans = beans - monkeyCost;
-      document.getElementById('monkeys').innerHTML = monkeys; 
-      document.getElementById('beans').innerHTML = beans;
-
-      var nextCost = Math.floor(10 * Math.pow(1.1,monkeys));
-      document.getElementById('monkeyCost').innerHTML = nextCost;  
-    };
-
-    window.setInterval(function(){ beanClick(monkeys); }, 1000);
-    // save();
-};
 
 // function save() {
 // 	var save = {
 //     monkeys: monkeys,
 //     beans: beans,
 // }
-// 	localStorage.setItem("save",JSON.stringify(save));
+// 	game_state = { beans: 12, monkeys: 12 }
 // }
 
 
@@ -82,4 +52,6 @@ function buyMonkey() {
 // 		Bean machien upgrades
 // 	Bean awards that give upgrades and display on screen
 // Add leaderboards
+
+
 
